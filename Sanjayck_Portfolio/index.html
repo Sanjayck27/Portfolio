@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dcdd1ab71c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal Portfolio Website - Sanjay C K</title>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front End Developer</p>
+                <h1>Hi, I'm <span>Sanjay C K</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-cols-1">
+                    <img src="about.jpg" alt="mypic">
+                </div>
+                <div class="about-cols-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="content-about-me">Hello! I'm Sanjay C K, an aspiring web developer with a passion for creating websites and a strong desire to learn and explore the world of web development. While I may be at the beginning of my journey, my enthusiasm for coding and creating digital experiences is what drives me forward.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>FrontEnd Developer</span><br>Web designing</li>
+                        <li><span>HTML,CSS,JavaScript</span><br>As a Beginner</li>
+                        <li><span>Java</span><br>As a Beginner</li>
+                        <li><span>Microsoft Excel,Word,Ppt</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>B.E from Dayananda Sagar College of Engineering(DSCE,Bangalore)</li>
+                        <li><span>2020</span><br>Diploma from M.S.Ramaiah Polytechnic(Bangalore)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------Project--------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Academic Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="Project1.png" alt="project1">
+                <div class="layer">
+                    <h3>IOT Based Efficient Hydroponics System</h3>
+                    <p>Worked on automation of nutrient dispensing in hydroponics system</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Project2.jpg" alt="project1">
+                <div class="layer">
+                <h3>Design of Detecting Helmet to avoid Two-Wheeler Road Accidents Drunk and Drive</h3>
+                <p>Worked on social cause and developed the model, it was a well-developed model</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Project3.png" alt="project1">
+                <div class="layer">
+                <h3>GSM based Distribution Transformer Monitor and Maintenance system</h3>
+                <p>Developed a system which can be used for monitoring the transformer without cutting off the power supply to the distribution line</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------Contact--------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>sanjay.c.k.888@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>6366084861</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="https://www.linkedin.com/in/sanjay-c-k/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href="/SANJAY C K RESUME.pdf" download class="btn">Download CV</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+        for(tabConent of tabContents){
+            tabConent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    let sidemenu = document.getElementById('sidemenu');
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxncDbbXYsCOBQkUoLza6bstIpLYGiM_On2qZma5CGjsUsPbpvi_eEcFlyL9zJcmLPDRQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
